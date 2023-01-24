@@ -23,3 +23,15 @@ for (let i = 0; i < btnOpenModal.length; i++)
 
 btnCloseModal.addEventListener("click", closeModal);
 overlay.addEventListener("click", closeModal);
+
+// "Esc" key press event
+document.addEventListener("keydown", function (e) {
+  // console.log("A key was pressed");
+  console.log(e.key);
+  if (e.key === "Escape") {
+    if (!modal.classList.contains("hidden")) {
+      closeModal();
+    }
+    // console.log("Escape was pressed");
+  }
+});
